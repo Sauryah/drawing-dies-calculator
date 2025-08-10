@@ -3,10 +3,10 @@ function updateLabel() {
     const startingDieLabel = document.getElementById('startingDieLabel');
     if (direction === 'previous') {
         startingDieLabel.textContent = 'Final Die (d):';
-        document.getElementById('startingDie').placeholder = 'e.g., 0.649';
+        document.getElementById('startingDie').placeholder = 'e.g., 0.123';
     } else { // 'next'
         startingDieLabel.textContent = 'Starting Die (D):';
-        document.getElementById('startingDie').placeholder = 'e.g., 0.729';
+        document.getElementById('startingDie').placeholder = 'e.g., 0.123';
     }
 }
 
