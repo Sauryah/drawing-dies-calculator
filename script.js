@@ -4,7 +4,7 @@ function updateLabel() {
     if (direction === 'previous') {
         startingDieLabel.textContent = 'Final Die (d):';
         document.getElementById('startingDie').placeholder = 'e.g., 0.123';
-    } else { // 'next'
+    } else {
         startingDieLabel.textContent = 'Starting Die (D):';
         document.getElementById('startingDie').placeholder = 'e.g., 0.123';
     }
@@ -34,40 +34,31 @@ function calculateDies() {
     for (let i = 0; i < numberOfDies; i++) {
         if (direction === 'previous') {
             currentDie *= factor;
-        } else { // 'next'
+        } else {
             currentDie /= factor;
         }
         dies.push(currentDie);
     }
     
-    // Display the list of dies
     if (direction === 'previous') {
         summaryMessageElement.textContent = `Calculating ${numberOfDies} previous dies starting from a final die of ${startingDie.toFixed(3)}.`;
-        // Display in reverse order for "previous"
         for (let i = dies.length - 1; i >= 0; i--) {
-            const dieSize = dies[i];
             const listItem = document.createElement('li');
-            if (i === 0) {
-                listItem.textContent = `Final Die (d): ${dieSize.toFixed(3)}`;
-            } else {
-                listItem.textContent = `Previous Die ${i}: ${dieSize.toFixed(3)}`;
-            }
+            listItem.textContent = (i === 0) 
+                ? `Final Die (d): ${dies[i].toFixed(3)}`
+                : `Previous Die ${i}: ${dies[i].toFixed(3)}`;
             dieListElement.appendChild(listItem);
         }
-    } else { // 'next'
+    } else {
         summaryMessageElement.textContent = `Calculating ${numberOfDies} next dies starting from a die of ${startingDie.toFixed(3)}.`;
-        // Display in forward order for "next"
         dies.forEach((dieSize, index) => {
             const listItem = document.createElement('li');
-            if (index === 0) {
-                listItem.textContent = `Starting Die (D): ${dieSize.toFixed(3)}`;
-            } else {
-                listItem.textContent = `Next Die ${index}: ${dieSize.toFixed(3)}`;
-            }
+            listItem.textContent = (index === 0) 
+                ? `Starting Die (D): ${dieSize.toFixed(3)}`
+                : `Next Die ${index}: ${dieSize.toFixed(3)}`;
             dieListElement.appendChild(listItem);
         });
     }
 }
 
-// Initial call to set the correct label on page load
 updateLabel();

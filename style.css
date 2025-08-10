@@ -1,6 +1,6 @@
 body {
-    font-family: 'Poppins', sans-serif; /* A more modern font */
-    background: linear-gradient(135deg, #f0f4f8, #c9d6df); /* Soft gradient background */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #c9d6df);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Slightly wider for better spacing */
+    width: 400px;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
