@@ -1,40 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif; /* A more modern font */
+    background: linear-gradient(135deg, #f0f4f8, #c9d6df); /* Soft gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    color: #333;
 }
 .calculator-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Slightly wider for better spacing */
     text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.calculator-container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 h1 {
-    color: #333;
-    margin-bottom: 20px;
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 2em;
 }
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
 }
 label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    font-weight: 600;
     color: #555;
+    font-size: 0.9em;
 }
 input[type="number"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
 }
 .radio-group {
     display: flex;
@@ -42,43 +56,55 @@ input[type="number"] {
     align-items: center;
     margin-top: 10px;
 }
+.radio-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
 button {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 .result-container {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #e9ecef;
     text-align: left;
+}
+#summaryMessage {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 15px;
 }
 #dieList {
     list-style-type: none;
     padding: 0;
 }
 #dieList li {
-    background-color: #e9ecef;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    background-color: #f1f5f9;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-weight: 500;
 }
 @media (max-width: 600px) {
     .calculator-container {
         width: 90%;
-        padding: 20px;
-    }
-    body {
-        height: auto;
-        padding: 20px;
+        padding: 25px;
     }
 }

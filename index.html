@@ -10,8 +10,8 @@
     <div class="calculator-container">
         <h1>Drawing Dies Calculator</h1>
         <div class="input-group">
-            <label for="finalDie">Starting Die (d):</label>
-            <input type="number" id="finalDie" placeholder="e.g., 0.649">
+            <label id="startingDieLabel" for="startingDie">Starting Die (d):</label>
+            <input type="number" id="startingDie" placeholder="e.g., 0.649">
         </div>
         <div class="input-group">
             <label for="elongationPercentage">Elongation Percentage:</label>
@@ -20,9 +20,9 @@
         <div class="input-group">
             <label>Calculation Direction:</label>
             <div class="radio-group">
-                <input type="radio" id="previousDies" name="direction" value="previous" checked>
+                <input type="radio" id="previousDies" name="direction" value="previous" checked onchange="updateLabel()">
                 <label for="previousDies">Previous Dies</label>
-                <input type="radio" id="nextDies" name="direction" value="next">
+                <input type="radio" id="nextDies" name="direction" value="next" onchange="updateLabel()">
                 <label for="nextDies">Next Dies</label>
             </div>
         </div>
@@ -33,6 +33,7 @@
         <button onclick="calculateDies()">Calculate Dies</button>
         <div class="result-container">
             <h2>Die Schedule:</h2>
+            <p id="summaryMessage"></p>
             <ul id="dieList"></ul>
         </div>
     </div>
