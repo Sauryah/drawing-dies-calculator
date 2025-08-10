@@ -10,17 +10,23 @@
     <div class="calculator-container">
         <h1>Drawing Dies Calculator</h1>
         <div class="input-group">
-            <label for="finalDieDiameter">Final Die Diameter (d):</label>
-            <input type="number" id="finalDieDiameter" placeholder="e.g., 2.0">
+            <label for="finalDie">Final Die (d):</label>
+            <input type="number" id="finalDie" placeholder="e.g., 0.649">
         </div>
         <div class="input-group">
-            <label for="elongationPercentage">Elongation Percentage per Die:</label>
-            <input type="number" id="elongationPercentage" placeholder="e.g., 25">
+            <label for="elongationPercentage">Elongation Percentage:</label>
+            <input type="number" id="elongationPercentage" placeholder="e.g., 26.17">
+        </div>
+        <div class="input-group">
+            <label for="numberOfDies">Number of Previous Dies:</label>
+            <input type="number" id="numberOfDies" placeholder="e.g., 5">
         </div>
         <button onclick="calculateDies()">Calculate Dies</button>
         <div class="result-container">
-            <h2>Required Dies:</h2>
-            <p>Number of Dies: <span id="numDies">0</span></p>
+            <h2>Results</h2>
+            <div class="single-result">
+                <h3>Pre-final Die (D): <span id="preFinalDieResult">0</span></h3>
+            </div>
             <h3>Die Schedule:</h3>
             <ul id="dieList"></ul>
         </div>

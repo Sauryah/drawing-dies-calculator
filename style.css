@@ -56,6 +56,14 @@ button:hover {
     border-top: 1px solid #eee;
     text-align: left;
 }
+.single-result {
+    margin-bottom: 15px;
+}
+#preFinalDieResult {
+    font-size: 24px;
+    color: #28a745;
+    font-weight: bold;
+}
 #dieList {
     list-style-type: none;
     padding: 0;
@@ -65,10 +73,6 @@ button:hover {
     padding: 8px;
     margin-bottom: 5px;
     border-radius: 4px;
-}
-#numDies {
-    font-weight: bold;
-    color: #28a745;
 }
 @media (max-width: 600px) {
     .calculator-container {
