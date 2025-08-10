@@ -29,12 +29,18 @@ label {
     font-weight: bold;
     color: #555;
 }
-input {
+input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
 }
 button {
     width: 100%;
@@ -55,14 +61,6 @@ button:hover {
     padding-top: 15px;
     border-top: 1px solid #eee;
     text-align: left;
-}
-.single-result {
-    margin-bottom: 15px;
-}
-#preFinalDieResult {
-    font-size: 24px;
-    color: #28a745;
-    font-weight: bold;
 }
 #dieList {
     list-style-type: none;
